@@ -1,3 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: aqua;
 }
+
+#index-title {
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.index-container {
+    background-color: blueviolet;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0px 10px;
+    border: 5px solid #000000;
+}
+
+.index-btn-container {
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 40px 0px;
+    width: 250px;
+}
+
+.index-btn-text {
+    font-size: 1.5rem;
+}
+
+#btn-space {
+    margin-bottom: 20px;
+}
+
