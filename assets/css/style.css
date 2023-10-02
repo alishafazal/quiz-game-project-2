@@ -46,3 +46,11 @@ body {
     margin-bottom: 20px;
 }
 
+.fa-play:hover {
+    color: green;
+}
+
+.fa-list:hover {
+    color: yellow;
+}
+
