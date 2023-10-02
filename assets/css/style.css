@@ -34,6 +34,7 @@ body {
     padding: 40px 0px;
     width: 250px;
     border: 3px solid #000000;
+    border-radius: 5px;
 }
 
 .index-btn-text {
@@ -56,13 +57,13 @@ body {
 }
 
 /*Game page styles*/
-.question-title {
-    
+#question-title {
+    padding: 15px 0px;
 }
 
 .question-container {
     background-color: #907ad6;
-    height: 350px;
+    height: 430px;
     width: 280px;
     margin: 20px auto;
     padding: 0px 10px;
@@ -82,7 +83,28 @@ body {
     padding: 20px 5px;
     width: 280px;
     border: 3px solid #000000;
+    border-radius: 5px;
 }
 
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px;
+}
 
+.next-btn-container {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
 
+.next-btn {
+    margin: 10px 0px;
+    background-color: #f3d9b1;
+    padding: 6px;
+    border: 3px solid #000000;
+}
+
+.next-btn:hover {
+    background-color: #f1e3f3;
+    cursor: pointer;
+}
