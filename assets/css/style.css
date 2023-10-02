@@ -7,7 +7,8 @@ body {
     background-color: #8fb8ed;
 }
 
-#index-title {
+/*Styles for Index page*/
+.main-title {
     font-size: 2.2rem;
     text-align: center;
     padding: 20px 0px;
@@ -53,4 +54,35 @@ body {
 .fa-list:hover {
     color: yellow;
 }
+
+/*Game page styles*/
+.question-title {
+    
+}
+
+.question-container {
+    background-color: #907ad6;
+    height: 350px;
+    width: 280px;
+    margin: 20px auto;
+    padding: 0px 10px;
+    border: 5px solid #000000;
+}
+
+.question-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    background-color: #f1e3f3;
+    text-align: start;
+    padding: 20px 5px;
+    width: 280px;
+    border: 3px solid #000000;
+}
+
+
 
