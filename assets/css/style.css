@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #C33149;
+    background-color: #8fb8ed;
 }
 
 #index-title {
@@ -15,7 +15,7 @@ body {
 }
 
 .index-container {
-    background-color: #A8C256;
+    background-color: #907ad6;
     height: 330px;
     width: 280px;
     display: flex;
@@ -28,7 +28,7 @@ body {
 }
 
 .index-btn-container {
-    background-color: #F3D9B1;
+    background-color: #f1e3f3;
     text-align: center;
     padding: 40px 0px;
     width: 250px;
