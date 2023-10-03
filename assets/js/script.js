@@ -90,3 +90,24 @@ const questions = [
     ]
 }
 ]
+
+let questionTitle = document.getElementById("question-title");
+let answerButton = document.getElementById("question-section");
+let nextQuestion = document.getElementById("next-btn");
+
+let questionNumber
+let score
+
+document.addEventListener("DOMContentLoaded", startQuiz);
+
+function startQuiz() {
+    questionNumber = 0;
+    score = 0;
+    showNextQuestion();
+}
+
+function showNextQuestion() {
+    let currentQuestion = questions[questionNumber];
+    let currentQuestionNumber = questionNumber + 1;
+    questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
+}

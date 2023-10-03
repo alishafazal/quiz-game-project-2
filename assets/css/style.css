@@ -70,7 +70,7 @@ body {
     border: 5px solid #000000;
 }
 
-.question-section {
+#question-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,7 @@ body {
     align-items: end;
 }
 
-.next-btn {
+#next-btn {
     margin: 10px 0px;
     background-color: #f3d9b1;
     padding: 6px;
@@ -105,7 +105,7 @@ body {
     display: none;
 }
 
-.next-btn:hover {
+#next-btn:hover {
     background-color: #f1e3f3;
     cursor: pointer;
 }
