@@ -58,6 +58,7 @@ body {
 
 /*Game page styles*/
 #question-title {
+    font-size: 1.1rem;
     padding: 15px 0px;
 }
 
