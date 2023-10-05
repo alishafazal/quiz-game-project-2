@@ -81,13 +81,13 @@ function showQuestion() {
     questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
     for (let i = 0; i < currentQuestion.answers.length; i++) {
         choices[i].textContent = currentQuestion.answers[i];
-        choices.forEach((button) => {
-            button.addEventListener("click", function() {
-                let selectedOption = button.textContent;
-                selectAnswer(selectedOption);
-            })
-            })
     }
+    choices.forEach((button) => {
+        button.addEventListener("click", function() {
+            let selectedOption = button.textContent;
+            selectAnswer(selectedOption);
+        })
+    })
 }
 
 function selectAnswer (selectedOption) {
