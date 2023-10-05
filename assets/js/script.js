@@ -71,15 +71,46 @@ document.addEventListener("DOMContentLoaded", startQuiz);
 function startQuiz() {
     questionNumber = 0;
     score = 0;
-    nextQuestionBtn.style.display = "none"
-    showNextQuestion();
+    showQuestion();
 }
 
-function showNextQuestion() {
+function showQuestion() {
+    nextQuestionBtn.style.display = "none"
     let currentQuestion = questions[questionNumber];
     let currentQuestionNumber = questionNumber + 1;
     questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
     for (let i = 0; i < currentQuestion.answers.length; i++) {
-        choices[i].innerHTML = currentQuestion.answers[i];
+        choices[i].textContent = currentQuestion.answers[i];
+        choices.forEach((button) => {
+            button.addEventListener("click", function() {
+                let selectedOption = button.textContent;
+                selectAnswer(selectedOption);
+            })
+            })
     }
 }
+
+function selectAnswer (selectedOption) {
+    let currentQuestion = questions[questionNumber];
+    if (selectedOption === currentQuestion.correctAnswer) {
+        score++;
+        nextQuestionBtn.style.display = "block"
+    }
+}
+
+function nextQuestion() {
+    questionNumber++;
+    if (questionNumber < questions.length) {
+        showQuestion();
+    } else {
+        displayScore();
+    }
+}
+
+nextQuestionBtn.addEventListener("click", () => {
+    if (questionNumber < questions.length) {
+        nextQuestion();
+    } else {
+        startQuiz();
+    }
+});
