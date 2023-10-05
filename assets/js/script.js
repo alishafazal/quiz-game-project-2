@@ -54,7 +54,7 @@ const questions = [
 
 let questionTitle = document.getElementById("question-title");
 let answerButton = document.getElementById("question-section");
-let nextQuestion = document.getElementById("next-btn");
+let nextQuestionBtn = document.getElementById("next-btn");
 let choiceOne = document.getElementById("choice-one");
 let choiceTwo = document.getElementById("choice-two");
 let choiceThree = document.getElementById("choice-three");
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", startQuiz);
 function startQuiz() {
     questionNumber = 0;
     score = 0;
+    nextQuestionBtn.style.display = "none"
     showNextQuestion();
 }
 
@@ -78,5 +79,7 @@ function showNextQuestion() {
     let currentQuestion = questions[questionNumber];
     let currentQuestionNumber = questionNumber + 1;
     questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
-    
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        choices[i].innerHTML = currentQuestion.answers[i];
+    }
 }
