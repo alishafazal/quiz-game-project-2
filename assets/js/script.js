@@ -1,103 +1,71 @@
 const questions = [
 {
     question: "What are the two reactants of respiration?",
-    Answers: [
-        {option: "Glucose and oxygen", correct: true},
-        {option: "Glucose and water", correct: false},
-        {option: "Oxygen and water", correct: false},
-        {option: "Oxygen and carbon dioxide", correct: false},
-    ]
+    answers: ["Glucose and oxygen", "Glucose and water", "Oxygen and water",
+    "Oxygen and carbon dioxide"],
+    correctAnswer: "Glucose and oxygen"
 },
 {
     question: "What is the chemical element for the symbol W?",
-    Answers: [
-        {option: "Osmium", correct: false},
-        {option: "Radon", correct: false},
-        {option: "Tungsten", correct: true},
-        {option: "Nitrogen", correct: false},
-    ]
+    answers: ["Osmium, Radon, Tungsten, Nitrogen"],
+    correctAnswer: "Tungsten"
 },
 {
     question: "Which gas makes up the third largest component of the earths atmosphere?",
-    Answers: [
-        {option: "Carbon dioxide", correct: false},
-        {option: "Argon", correct: true},
-        {option: "Oxygen", correct: false},
-        {option: "Helium", correct: false},
-    ]
+    answers: ["Carbon dioxide, Argon, Oxygen, Helium"],
+    correctAnswer: "Argon"
 },
 {
     question: "How many blood groups are there?",
-    Answers: [
-        {option: "4", correct: false},
-        {option: "6", correct: false},
-        {option: "8", correct: true},
-        {option: "10", correct: false},
-    ]
+    answers: ["4, 6, 8, 10"],
+    correctAnswer: "8"
 },
 {
     question: "Which is the longest nerve in the human body?",
-    Answers: [
-        {option: "Optic nerve", correct: false},
-        {option: "Ulnar nerve", correct: false},
-        {option: "Vagus nerve", correct: false},
-        {option: "Sciatic nerve", correct: true},
-    ]
+    answers: ["Optic nerve, Ulnar nerve, Vagus nerve, Sciatic nerve"],
+    correctAnswer: "Sciatic nerve"
 },
 {
     question: "The asteroid belt is located between which two planets?",
-    Answers: [
-        {option: "Jupiter and Mars", correct: true},
-        {option: "Jupiter and Saturn", correct: false},
-        {option: "Mercury and Venus", correct: false},
-        {option: "Saturn and Uranus", correct: false},
-    ]
+    answers: ["Jupiter and Mars, Jupiter and Saturn, Mercury and Venus, Saturn and Uranus"],
+    correctAnswer: "Jupiter and Mars"
 },
 {
-    question: "Diamonds are formed of which substance?",
-    Answers: [
-        {option: "Carbon", correct: true},
-        {option: "Oxygen", correct: false},
-        {option: "Sodium", correct: false},
-        {option: "Nitrogen", correct: false},
-    ]
+    question: "What is the name of the process of converting a substance from a gas directly into a solid?",
+    answers: ["Vaporisation, Sublimation, Evaporation, Freezing"],
+    correctAnswer: "Sublimation"
 },
 {
     question: "Which metal is the lightest?",
-    Answers: [
-        {option: "Silver", correct: false},
-        {option: "Aluminium", correct: false},
-        {option: "Iron", correct: false},
-        {option: "Lithium", correct: true},
-    ]
+    answers: ["Silver, Aluminium, Iron, Lithium"],
+    correctAnswer: "Lithium"
 },
 {
-    question: "Largest mountain the the world?",
-    Answers: [
-        {option: "K2", correct: false},
-        {option: "Kilamanjaro", correct: false},
-        {option: "Mount Everest", correct: true},
-        {option: "Ben Nevis", correct: false},
-    ]
+    question: "Which is the tallest activr volcano in the world?",
+    answers: ["Mount Fuji, Mount Kilimanjaro, Mauna Loa, Mount Bromo"],
+    correctAnswer: "Mauna Loa"
 },
 {
-    question: "Rayleigh scattering is responsible for which phenomena?",
-    Answers: [
-        {option: "Volcanos", correct: false},
-        {option: "Sky blue", correct: true},
-        {option: "Gas", correct: false},
-        {option: "Water", correct: false},
-    ]
+    question: "Which moon is known for its fissures that spew icy material into space?",
+    answers: ["Io, Enceladus, Europa, Deimos"],
+    correctAnswer: "Enceladus"
 }
-]
+];
 
 let questionTitle = document.getElementById("question-title");
 let answerButton = document.getElementById("question-section");
 let nextQuestion = document.getElementById("next-btn");
+let choiceOne = document.getElementById("choice-one");
+let choiceTwo = document.getElementById("choice-two");
+let choiceThree = document.getElementById("choice-three");
+let choiceFour = document.getElementById("choice-four");
+
+let choices = [choiceOne, choiceTwo, choiceThree, choiceFour];
 
 let questionNumber
 let score
 
+// Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
 
 function startQuiz() {
@@ -110,4 +78,5 @@ function showNextQuestion() {
     let currentQuestion = questions[questionNumber];
     let currentQuestionNumber = questionNumber + 1;
     questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
+    
 }
