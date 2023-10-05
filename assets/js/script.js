@@ -16,7 +16,7 @@ const questions = [
     correctAnswer: "Argon"
 },
 {
-    question: "How many blood groups are there?",
+    question: "How many types of blood groups are there?",
     answers: ["4", "6", "8", "10"],
     correctAnswer: "8"
 },
@@ -31,22 +31,22 @@ const questions = [
     correctAnswer: "Jupiter and Mars"
 },
 {
-    question: "What is the name of the process of converting a substance from a gas directly into a solid?",
-    answers: ["Vaporisation", "Sublimation", "Evaporation", "Freezing"],
-    correctAnswer: "Sublimation"
+    question: "In the acronym LASER, what does the letter R stand for?",
+    answers: ["Reflection", "Radiation", "Resistance", "Relative"],
+    correctAnswer: "Radiation"
 },
 {
-    question: "Which metal is the lightest?",
+    question: "What is the lightest metal in the periodic table?",
     answers: ["Silver", "Aluminium", "Iron", "Lithium"],
     correctAnswer: "Lithium"
 },
 {
-    question: "Which is the tallest activr volcano in the world?",
+    question: "Which is the tallest active volcano in the world?",
     answers: ["Mount Fuji", "Mount Kilimanjaro", "Mauna Loa", "Mount Bromo"],
     correctAnswer: "Mauna Loa"
 },
 {
-    question: "Which moon is known for its fissures that spew icy material into space?",
+    question: "Which moon is known for its tiger stripe shaped fissures?",
     answers: ["Io", "Enceladus", "Europa", "Deimos"],
     correctAnswer: "Enceladus"
 }
@@ -55,6 +55,7 @@ const questions = [
 let questionTitle = document.getElementById("question-title");
 let answerButton = document.getElementById("question-section");
 let nextQuestionBtn = document.getElementById("next-btn");
+let finishBtn = document.getElementById("finish-btn")
 let choiceOne = document.getElementById("choice-one");
 let choiceTwo = document.getElementById("choice-two");
 let choiceThree = document.getElementById("choice-three");
@@ -75,7 +76,8 @@ function startQuiz() {
 }
 
 function showQuestion() {
-    nextQuestionBtn.style.display = "none"
+    finishBtn.style.display = "none";
+    nextQuestionBtn.style.display = "none";
     let currentQuestion = questions[questionNumber];
     let currentQuestionNumber = questionNumber + 1;
     questionTitle.innerHTML = `${currentQuestionNumber}. ${currentQuestion.question}`;
@@ -94,7 +96,7 @@ function selectAnswer (selectedOption) {
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
         score++;
-        nextQuestionBtn.style.display = "block"
+        nextQuestionBtn.style.display = "block";
     }
 }
 
@@ -111,6 +113,10 @@ nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
         nextQuestion();
     } else {
-        startQuiz();
+        nextQuestionBtn.style.display = "none"
     }
 });
+
+function displayScore() {
+
+}
