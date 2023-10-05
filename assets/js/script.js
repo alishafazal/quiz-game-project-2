@@ -7,47 +7,47 @@ const questions = [
 },
 {
     question: "What is the chemical element for the symbol W?",
-    answers: ["Osmium, Radon, Tungsten, Nitrogen"],
+    answers: ["Osmium", "Radon", "Tungsten", "Nitrogen"],
     correctAnswer: "Tungsten"
 },
 {
     question: "Which gas makes up the third largest component of the earths atmosphere?",
-    answers: ["Carbon dioxide, Argon, Oxygen, Helium"],
+    answers: ["Carbon dioxide", "Argon", "Oxygen", "Helium"],
     correctAnswer: "Argon"
 },
 {
     question: "How many blood groups are there?",
-    answers: ["4, 6, 8, 10"],
+    answers: ["4", "6", "8", "10"],
     correctAnswer: "8"
 },
 {
     question: "Which is the longest nerve in the human body?",
-    answers: ["Optic nerve, Ulnar nerve, Vagus nerve, Sciatic nerve"],
+    answers: ["Optic nerve", "Ulnar nerve", "Vagus nerve", "Sciatic nerve"],
     correctAnswer: "Sciatic nerve"
 },
 {
     question: "The asteroid belt is located between which two planets?",
-    answers: ["Jupiter and Mars, Jupiter and Saturn, Mercury and Venus, Saturn and Uranus"],
+    answers: ["Jupiter and Mars", "Jupiter and Saturn", "Mercury and Venus", "Saturn and Uranus"],
     correctAnswer: "Jupiter and Mars"
 },
 {
     question: "What is the name of the process of converting a substance from a gas directly into a solid?",
-    answers: ["Vaporisation, Sublimation, Evaporation, Freezing"],
+    answers: ["Vaporisation", "Sublimation", "Evaporation", "Freezing"],
     correctAnswer: "Sublimation"
 },
 {
     question: "Which metal is the lightest?",
-    answers: ["Silver, Aluminium, Iron, Lithium"],
+    answers: ["Silver", "Aluminium", "Iron", "Lithium"],
     correctAnswer: "Lithium"
 },
 {
     question: "Which is the tallest activr volcano in the world?",
-    answers: ["Mount Fuji, Mount Kilimanjaro, Mauna Loa, Mount Bromo"],
+    answers: ["Mount Fuji", "Mount Kilimanjaro", "Mauna Loa", "Mount Bromo"],
     correctAnswer: "Mauna Loa"
 },
 {
     question: "Which moon is known for its fissures that spew icy material into space?",
-    answers: ["Io, Enceladus, Europa, Deimos"],
+    answers: ["Io", "Enceladus", "Europa", "Deimos"],
     correctAnswer: "Enceladus"
 }
 ];
