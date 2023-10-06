@@ -54,6 +54,7 @@ const questions = [
 
 let questionTitle = document.getElementById("question-title");
 let answerButton = document.getElementById("question-section");
+let btnContainer = document.getElementById("btn-container")
 let nextQuestionBtn = document.getElementById("next-btn");
 let finishBtn = document.getElementById("finish-btn")
 let choiceOne = document.getElementById("choice-one");
@@ -121,16 +122,21 @@ nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
         nextQuestion();
     } else {
-        nextQuestionBtn.style.display = "none";
-        finishBtn.style.display = "block";
+        clearEverything();
+        displayScore();
     }
-    finishBtn.addEventListener("click", displayScore);
 });
 
 function clearPrevious() {
     for (let i = 0; i < choices.length; i++) {
         choices[i].classList.remove("disabled");
     }
+}
+
+function clearEverything() {
+    questionTitle.remove();
+    answerButton.remove();
+    btnContainer.remove();
 }
 
 function displayScore() {
