@@ -60,6 +60,7 @@ let choiceOne = document.getElementById("choice-one");
 let choiceTwo = document.getElementById("choice-two");
 let choiceThree = document.getElementById("choice-three");
 let choiceFour = document.getElementById("choice-four");
+let scoreText = document.getElementById("score-text");
 
 let choices = [choiceOne, choiceTwo, choiceThree, choiceFour];
 
@@ -113,9 +114,14 @@ nextQuestionBtn.addEventListener("click", () => {
     } else {
         nextQuestionBtn.style.display = "none";
         finishBtn.style.display = "block";
+        finishBtn.addEventListener("click", displayScore);
     }
 });
 
 function displayScore() {
-
+    if (score === 10) {
+        scoreText.innerHTML = `Amazing! You scored ${score} out of ${questions.length}`
+    } else {
+        scoreText.innerHTML = `You scored ${score} out of ${questions.length}. Press retry to play again!`
+    }
 }
