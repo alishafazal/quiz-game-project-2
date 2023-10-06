@@ -113,7 +113,8 @@ nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
         nextQuestion();
     } else {
-        nextQuestionBtn.style.display = "none"
+        nextQuestionBtn.style.display = "none";
+        finishBtn.style.display = "block";
     }
 });
 
