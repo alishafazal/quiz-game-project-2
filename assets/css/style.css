@@ -126,6 +126,10 @@ body {
     cursor: pointer;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 /*Score page section*/
 .score-container {
     background-color: #907ad6;

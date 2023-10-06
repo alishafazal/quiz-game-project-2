@@ -70,6 +70,10 @@ let score
 // Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
 
+for (let i = 0; i < choices.length; i++) {
+    let disableBtn = choices[i].classList.add("disabled");
+}
+
 function startQuiz() {
     questionNumber = 0;
     score = 0;
@@ -93,13 +97,16 @@ function showQuestion() {
     })
 }
 
-function selectAnswer (selectedOption) {
+function selectAnswer(selectedOption) {
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
         score++;
-        nextQuestionBtn.style.display = "block";
+    } else if (selectedOption !== currentQuestion.correctAnswer) {
+        disableBtn
     }
+    nextQuestionBtn.style.display = "block";
 }
+
 
 function nextQuestion() {
     questionNumber++;
