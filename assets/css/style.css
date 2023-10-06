@@ -109,14 +109,29 @@ body {
     cursor: pointer;
 }
 
+.remove-link {
+    text-decoration: none;
+}
+
 #finish-btn {
     margin: 10px 10px;
     background-color: #f3d9b1;
     padding: 6px;
     border: 3px solid #000000;
+    color: #000000;
 }
 
 #finish-btn:hover {
     background-color: #f1e3f3;
     cursor: pointer;
+}
+
+/*Score page section*/
+.score-container {
+    background-color: #907ad6;
+    height: 430px;
+    width: 280px;
+    margin: 20px auto;
+    padding: 0px 10px;
+    border: 5px solid #000000;
 }

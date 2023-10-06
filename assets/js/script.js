@@ -104,8 +104,6 @@ function nextQuestion() {
     questionNumber++;
     if (questionNumber < questions.length) {
         showQuestion();
-    } else {
-        displayScore();
     }
 }
 
