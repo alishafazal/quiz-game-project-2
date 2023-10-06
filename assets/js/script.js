@@ -70,10 +70,6 @@ let score
 // Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
 
-for (let i = 0; i < choices.length; i++) {
-    let disableBtn = choices[i].classList.add("disabled");
-}
-
 function startQuiz() {
     questionNumber = 0;
     score = 0;
@@ -81,6 +77,7 @@ function startQuiz() {
 }
 
 function showQuestion() {
+    clearPrevious();
     finishBtn.style.display = "none";
     nextQuestionBtn.style.display = "none";
     let currentQuestion = questions[questionNumber];
@@ -101,8 +98,13 @@ function selectAnswer(selectedOption) {
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
         score++;
+        for (let i = 0; i < choices.length; i++) {
+            choices[i].classList.add("disabled");
+        }
     } else if (selectedOption !== currentQuestion.correctAnswer) {
-        disableBtn
+        for (let i = 0; i < choices.length; i++) {
+            choices[i].classList.add("disabled");
+        }
     }
     nextQuestionBtn.style.display = "block";
 }
@@ -121,9 +123,15 @@ nextQuestionBtn.addEventListener("click", () => {
     } else {
         nextQuestionBtn.style.display = "none";
         finishBtn.style.display = "block";
-        finishBtn.addEventListener("click", displayScore);
     }
+    finishBtn.addEventListener("click", displayScore);
 });
+
+function clearPrevious() {
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].classList.remove("disabled");
+    }
+}
 
 function displayScore() {
     if (score === 10) {
