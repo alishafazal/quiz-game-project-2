@@ -65,8 +65,8 @@ let scoreText = document.getElementById("score-text");
 
 let choices = [choiceOne, choiceTwo, choiceThree, choiceFour];
 
-let questionNumber
-let score
+let questionNumber = 0;
+let score = 0
 
 // Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
@@ -134,7 +134,7 @@ function clearPrevious() {
 }
 
 function displayScore() {
-    if (score === 10) {
+    if (scorecore === "10") {
         scoreText.innerHTML = `Amazing! You scored ${score} out of ${questions.length}`
     } else {
         scoreText.innerHTML = `You scored ${score} out of ${questions.length}. Press retry to play again!`

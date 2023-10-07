@@ -25,8 +25,15 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/script.js">
+        let finalScore = score.toString();
 
-    <script src="assets/js/script.js"></script>
+        localStorage.setItem("finalScore", finalScore);
+
+        document.getElementById("finish-btn").addEventListener("click", function(){
+        window.location.href = "score.html";
+        })
+    </script>
 </body>
 
 </html>
