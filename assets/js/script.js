@@ -110,7 +110,6 @@ function selectAnswer(selectedOption) {
     nextQuestionBtn.style.display = "block";
 }
 
-
 function nextQuestion() {
     questionNumber++;
     if (questionNumber < questions.length) {
@@ -122,8 +121,9 @@ nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
         nextQuestion();
     } else {
-        clearEverything();
-        displayScore();
+        nextQuestionBtn.style.display = "none";
+        finishBtn.style.display = "block";
+        finishBtn.addEventListener("click", displayScore);
     }
 });
 
@@ -131,12 +131,6 @@ function clearPrevious() {
     for (let i = 0; i < choices.length; i++) {
         choices[i].classList.remove("disabled");
     }
-}
-
-function clearEverything() {
-    questionTitle.remove();
-    answerButton.remove();
-    btnContainer.remove();
 }
 
 function displayScore() {
