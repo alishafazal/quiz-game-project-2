@@ -61,7 +61,6 @@ let choiceOne = document.getElementById("choice-one");
 let choiceTwo = document.getElementById("choice-two");
 let choiceThree = document.getElementById("choice-three");
 let choiceFour = document.getElementById("choice-four");
-let scoreText = document.getElementById("score-text");
 
 let choices = [choiceOne, choiceTwo, choiceThree, choiceFour];
 
@@ -74,6 +73,7 @@ document.addEventListener("DOMContentLoaded", startQuiz);
 function startQuiz() {
     questionNumber = 0;
     score = 0;
+    console.log("This is the score:" + score + " in the startQuiz function");
     showQuestion();
 }
 
@@ -87,18 +87,32 @@ function showQuestion() {
     for (let i = 0; i < currentQuestion.answers.length; i++) {
         choices[i].textContent = currentQuestion.answers[i];
     }
+
+    console.log("Before choices.forEach " + score);
+
+
+
     choices.forEach((button) => {
         button.addEventListener("click", function() {
             let selectedOption = button.textContent;
+            console.log("Just before select answer is called:" + score + " button text" + selectedOption);
             selectAnswer(selectedOption);
         })
     })
 }
 
+// choices[0].addEventListener("click", selectAnswer(0));
+// choices[1].addEventListener("click", selectAnswer(1));
+// choices[2].addEventListener("click", selectAnswer(2));
+// choices[3].addEventListener("click", selectAnswer(3));
+
 function selectAnswer(selectedOption) {
+    // console.log("The value of choicesIndex is: " + choicesIndex);
+    // let selectedOption = choices[choicesIndex].textContent;
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
-        score++;
+        score = score + 1;
+        console.log("Score after adding one: " + score);
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
         }
@@ -113,17 +127,21 @@ function selectAnswer(selectedOption) {
 function nextQuestion() {
     questionNumber++;
     if (questionNumber < questions.length) {
+        console.log("The score before the showQuestion function has been called: " + score)
         showQuestion();
     }
 }
 
 nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
-        nextQuestion();
+        nextQuestion()
     } else {
         nextQuestionBtn.style.display = "none";
         finishBtn.style.display = "block";
         finishBtn.addEventListener("click", displayScore);
+        let finalScore = score.toString();
+        localStorage.setItem("finalScore", finalScore);
+        console.log("nextquestion event listener" + score);
     }
 });
 
