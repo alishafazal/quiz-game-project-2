@@ -155,6 +155,18 @@ body {
     pointer-events: none;
 }
 
+.correctAnswerColour {
+    background-color: green;
+}
+
+.greyOut {
+    background-color: grey;
+}
+
+.wrongAnswerColour {
+    background-color: red;
+}
+
 /*Score page section*/
 .score-container {
     background-color: #907ad6;

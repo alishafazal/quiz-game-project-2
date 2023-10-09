@@ -91,14 +91,22 @@ function showQuestion() {
     console.log("Before choices.forEach " + score);
 
 
+    for (let i = 0; i < choices.length; i++) {
+        choices[i].addEventListener("click", addEventListenerToAnswerButtons);
+    }
+    // choices.forEach((button) => {
+    //     button.addEventListener("click", function() {
+    //         let selectedOption = button.textContent;
+    //         console.log("Just before select answer is called:" + score + " button text" + selectedOption);
+    //         selectAnswer(selectedOption);
+    //     })
+    // })
+}
 
-    choices.forEach((button) => {
-        button.addEventListener("click", function() {
-            let selectedOption = button.textContent;
-            console.log("Just before select answer is called:" + score + " button text" + selectedOption);
-            selectAnswer(selectedOption);
-        })
-    })
+function addEventListenerToAnswerButtons(clickEvent) {
+    console.log("inside event listener predicate");
+    let selectedOption = clickEvent.target.textContent;
+    selectAnswer(selectedOption);
 }
 
 // choices[0].addEventListener("click", selectAnswer(0));
@@ -115,10 +123,26 @@ function selectAnswer(selectedOption) {
         console.log("Score after adding one: " + score);
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
+            if (choices[i].textContent === selectedOption) {
+                choices[i].classList.add("correctAnswerColour");
+            } else {
+                choices[i].classList.add("greyOut");
+            }
         }
     } else if (selectedOption !== currentQuestion.correctAnswer) {
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
+            if (choices[i].textContent === selectedOption) {
+                choices[i].classList.add("wrongAnswerColour");
+            } else {
+                choices[i].classList.add("greyOut");
+            } 
+            
+            if (choices[i].textContent === currentQuestion.correctAnswer) {
+                choices[i].classList.remove("greyOut");
+                choices[i].classList.add("correctAnswerColour");
+            }
+
         }
     }
     nextQuestionBtn.style.display = "block";
@@ -138,23 +162,19 @@ nextQuestionBtn.addEventListener("click", () => {
     } else {
         nextQuestionBtn.style.display = "none";
         finishBtn.style.display = "block";
-        finishBtn.addEventListener("click", displayScore);
         let finalScore = score.toString();
         localStorage.setItem("finalScore", finalScore);
         console.log("nextquestion event listener" + score);
     }
 });
 
+startQuiz();
+
 function clearPrevious() {
     for (let i = 0; i < choices.length; i++) {
         choices[i].classList.remove("disabled");
-    }
-}
-
-function displayScore() {
-    if (scorecore === "10") {
-        scoreText.innerHTML = `Amazing! You scored ${score} out of ${questions.length}`
-    } else {
-        scoreText.innerHTML = `You scored ${score} out of ${questions.length}. Press retry to play again!`
+        choices[i].classList.remove("wrongAnswerColour");
+        choices[i].classList.remove("correctAnswerColour");
+        choices[i].classList.remove("greyOut");
     }
 }
