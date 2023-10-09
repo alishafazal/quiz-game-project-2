@@ -56,6 +56,30 @@ body {
     color: yellow;
 }
 
+/*Instruction page styles*/
+#instructions-container {
+    background-color: #907ad6;
+    height: 330px;
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0px 10px;
+    border: 5px solid #000000;
+}
+
+#instructions-txt-container {
+    background-color: #f1e3f3;
+    text-align: center;
+    padding: 40px 0px;
+    height: 190px;
+    width: 250px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+}
+
 /*Game page styles*/
 #question-title {
     font-size: 1rem;
