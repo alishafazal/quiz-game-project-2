@@ -180,7 +180,7 @@ body {
 /*Score page section*/
 .score-container {
     background-color: #907ad6;
-    height: 430px;
+    height: 330px;
     width: 280px;
     margin: 20px auto;
     padding: 0px 10px;
@@ -191,13 +191,44 @@ body {
     flex-direction: column;
 }
 
+#score-txt-container {
+    background-color: #f1e3f3;
+    text-align: center;
+    padding: 40px 0px;
+    height: 190px;
+    width: 250px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#score-text {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+}
+
 #retry-btn {
-    margin: 10px 10px;
+    margin: 20px 10px;
     background-color: #f3d9b1;
     padding: 6px;
     border: 3px solid #000000;
     color: #000000;
     font-family: 'Roboto', sans-serif;
+}
+
+#trophy-icon {
+    color: goldenrod;
+    font-size: 1.8rem;
+    padding: 20px;
+
+}
+
+#retry-btn:hover {
+    background-color: #f1e3f3;
+    cursor: pointer;
 }
 
 
