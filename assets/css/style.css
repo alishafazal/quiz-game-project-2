@@ -166,15 +166,15 @@ body {
     pointer-events: none;
 }
 
-.correctAnswerColour {
+.correct-answer-colour {
     background-color: green;
 }
 
-.greyOut {
+.grey-out {
     background-color: grey;
 }
 
-.wrongAnswerColour {
+.wrong-answer-colour {
     background-color: red;
 }
 

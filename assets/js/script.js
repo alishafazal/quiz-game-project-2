@@ -120,23 +120,23 @@ function selectAnswer(selectedOption) {
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
             if (choices[i].textContent === selectedOption) {
-                choices[i].classList.add("correctAnswerColour");
+                choices[i].classList.add("correct-answer-colour");
             } else {
-                choices[i].classList.add("greyOut");
+                choices[i].classList.add("grey-out");
             }
         }
     } else if (selectedOption !== currentQuestion.correctAnswer) {
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
             if (choices[i].textContent === selectedOption) {
-                choices[i].classList.add("wrongAnswerColour");
+                choices[i].classList.add("wrong-answer-colour");
             } else {
-                choices[i].classList.add("greyOut");
+                choices[i].classList.add("grey-out");
             } 
             
             if (choices[i].textContent === currentQuestion.correctAnswer) {
-                choices[i].classList.remove("greyOut");
-                choices[i].classList.add("correctAnswerColour");
+                choices[i].classList.remove("grey-out");
+                choices[i].classList.add("correct-answer-colour");
             }
         }
     }
@@ -181,8 +181,8 @@ startQuiz();
 function clearPrevious() {
     for (let i = 0; i < choices.length; i++) {
         choices[i].classList.remove("disabled");
-        choices[i].classList.remove("wrongAnswerColour");
-        choices[i].classList.remove("correctAnswerColour");
-        choices[i].classList.remove("greyOut");
+        choices[i].classList.remove("wrong-answer-colour");
+        choices[i].classList.remove("correct-answer-colour");
+        choices[i].classList.remove("grey-out");
     }
 }
