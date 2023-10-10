@@ -101,7 +101,6 @@ body {
 }
 
 ul {
-    list-style-position: inside;
     padding: 10px 20px;
     text-align: left;
 }
@@ -294,12 +293,118 @@ footer {
 
 #footer-icons li {
     list-style: none;
-    padding: 0 10px;
+    padding: 0px 10px;
     font-size: 25px;
     color: #000000;
 }
 
 #footer-icon-style {
     color: #000000;
+}
+
+/*Media query for devices with a scrren size of 768px and up*/
+@media screen and (min-width: 768px) {
+    .main-title {
+        font-size: 2.8rem;
+    }
+
+    .index-container {
+        height: 400px;
+        width: 320px;
+        margin: 20px auto;
+        padding: 0px 10px;
+    }
+
+    .index-btn-container {
+        padding: 55px 0px;
+        width: 280px;
+    }
+
+    .index-btn-text {
+        font-size: 2.1rem;
+        letter-spacing: 1.5px;
+    }
+
+    #instructions-container {
+        height: 400px;
+        width: 320px;
+        margin: 20px auto;
+        padding: 0px 10px;
+    }
+
+    #instructions-txt-container {
+        height: 275px;
+        width: 280px;
+    }
+
+    #instructions-h2 {
+        padding: 10px;
+    }
+
+    .fa-flask-vial {
+        font-size: 0.8rem;
+    }
+
+    ul {
+        padding: 15px 20px;
+    }
+    
+    li {
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    #question-title {
+        font-size: 1.1rem;
+        padding: 15px 10px;
+    }
+
+    .question-container {
+        height: 440px;
+        width: 350px;
+    }
+    
+    .btn {
+        padding: 20px 5px;
+        width: 330px;
+        font-size: 0.9rem;
+    }
+
+    .score-container {
+        height: 400px;
+        width: 320px;
+        margin: 20px auto;
+        padding: 0px 10px;
+    }
+    
+    #score-txt-container {
+        height: 255px;
+        width: 275px;
+    }
+
+    #score-text {
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+    }
+    
+    #retry-btn {
+        margin: 20px 10px;
+        background-color: #f3d9b1;
+        padding: 6px;
+        border: 3px solid #000000;
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    #trophy-icon {
+        color: goldenrod;
+        font-size: 1.8rem;
+        padding: 30px;
+    }
+
+    #footer-icons li {
+        padding: 0px 20px;
+        font-size: 30px;
+    }
 }
 
