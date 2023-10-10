@@ -1,3 +1,4 @@
+//Questions array containing each possible question with answers and the correct answer
 const questions = [
 {
     question: "What are the two reactants of respiration?",
@@ -52,9 +53,8 @@ const questions = [
 }
 ];
 
+//Getting HTML elements by their id
 let questionTitle = document.getElementById("question-title");
-let answerButton = document.getElementById("question-section");
-let btnContainer = document.getElementById("btn-container");
 let nextQuestionBtn = document.getElementById("next-btn");
 let finishBtn = document.getElementById("finish-btn");
 let choiceOne = document.getElementById("choice-one");
@@ -70,12 +70,18 @@ let score = 0;
 // Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
 
+// Function which begins the quiz by calling the showQuestion function
 function startQuiz() {
     questionNumber = 0;
     score = 0;
     showQuestion();
 }
 
+/**
+ * Function which displays the current question and answers
+ * Event listeners are added to each answer button
+ * addEventListenerToAnswerButtons function is called
+ */
 function showQuestion() {
     clearPrevious();
     finishBtn.style.display = "none";
@@ -92,11 +98,21 @@ function showQuestion() {
     }
 }
 
+/**
+ * Function to define the selected option chosen by the user and store in variable
+ * selectAnswer function is called
+ */
 function addEventListenerToAnswerButtons(clickEvent) {
     let selectedOption = clickEvent.target.textContent;
     selectAnswer(selectedOption);
 }
 
+/**
+ * Function to handle the correct and incorrect answer based on selectedOption
+ * buttons will display a colour based on the choice of answer
+ * buttons become disabled after the user has chosen their answer
+ * next button will display to allow the user to move onto the next question
+ */
 function selectAnswer(selectedOption) {
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
@@ -122,12 +138,15 @@ function selectAnswer(selectedOption) {
                 choices[i].classList.remove("greyOut");
                 choices[i].classList.add("correctAnswerColour");
             }
-
         }
     }
     nextQuestionBtn.style.display = "block";
 }
 
+/**
+ * Function to increment question number
+ * showQuestion function is called move to the next question
+ */
 function nextQuestion() {
     questionNumber++;
     if (questionNumber < questions.length) {
@@ -135,6 +154,13 @@ function nextQuestion() {
     }
 }
 
+/**
+ * Event listener is added to the next button
+ * when the user presses the next button, the question will therefore move onto the next question
+ * if the user reaches the end of the quiz, the next button is hidden and finish button displayed
+ * overall score is stored in the finalScore variable
+ * final score is converted to a string and is stored in the browsers local storage
+ */
 nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
         nextQuestion();
@@ -143,12 +169,15 @@ nextQuestionBtn.addEventListener("click", () => {
         finishBtn.style.display = "block";
         let finalScore = score.toString();
         localStorage.setItem("finalScore", finalScore);
-        console.log("nextquestion event listener" + score);
     }
 });
 
 startQuiz();
 
+/**
+ * Function which is called in the showQuestion function
+ * its purpose is to clear all colours and enable all buttons again
+ */
 function clearPrevious() {
     for (let i = 0; i < choices.length; i++) {
         choices[i].classList.remove("disabled");
