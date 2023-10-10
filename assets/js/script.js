@@ -54,9 +54,9 @@ const questions = [
 
 let questionTitle = document.getElementById("question-title");
 let answerButton = document.getElementById("question-section");
-let btnContainer = document.getElementById("btn-container")
+let btnContainer = document.getElementById("btn-container");
 let nextQuestionBtn = document.getElementById("next-btn");
-let finishBtn = document.getElementById("finish-btn")
+let finishBtn = document.getElementById("finish-btn");
 let choiceOne = document.getElementById("choice-one");
 let choiceTwo = document.getElementById("choice-two");
 let choiceThree = document.getElementById("choice-three");
@@ -65,7 +65,7 @@ let choiceFour = document.getElementById("choice-four");
 let choices = [choiceOne, choiceTwo, choiceThree, choiceFour];
 
 let questionNumber = 0;
-let score = 0
+let score = 0;
 
 // Event listener which starts the quiz once the DOM has finished loading
 document.addEventListener("DOMContentLoaded", startQuiz);
@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", startQuiz);
 function startQuiz() {
     questionNumber = 0;
     score = 0;
-    console.log("This is the score:" + score + " in the startQuiz function");
     showQuestion();
 }
 
@@ -88,39 +87,20 @@ function showQuestion() {
         choices[i].textContent = currentQuestion.answers[i];
     }
 
-    console.log("Before choices.forEach " + score);
-
-
     for (let i = 0; i < choices.length; i++) {
         choices[i].addEventListener("click", addEventListenerToAnswerButtons);
     }
-    // choices.forEach((button) => {
-    //     button.addEventListener("click", function() {
-    //         let selectedOption = button.textContent;
-    //         console.log("Just before select answer is called:" + score + " button text" + selectedOption);
-    //         selectAnswer(selectedOption);
-    //     })
-    // })
 }
 
 function addEventListenerToAnswerButtons(clickEvent) {
-    console.log("inside event listener predicate");
     let selectedOption = clickEvent.target.textContent;
     selectAnswer(selectedOption);
 }
 
-// choices[0].addEventListener("click", selectAnswer(0));
-// choices[1].addEventListener("click", selectAnswer(1));
-// choices[2].addEventListener("click", selectAnswer(2));
-// choices[3].addEventListener("click", selectAnswer(3));
-
 function selectAnswer(selectedOption) {
-    // console.log("The value of choicesIndex is: " + choicesIndex);
-    // let selectedOption = choices[choicesIndex].textContent;
     let currentQuestion = questions[questionNumber];
     if (selectedOption === currentQuestion.correctAnswer) {
         score = score + 1;
-        console.log("Score after adding one: " + score);
         for (let i = 0; i < choices.length; i++) {
             choices[i].classList.add("disabled");
             if (choices[i].textContent === selectedOption) {
@@ -151,14 +131,13 @@ function selectAnswer(selectedOption) {
 function nextQuestion() {
     questionNumber++;
     if (questionNumber < questions.length) {
-        console.log("The score before the showQuestion function has been called: " + score)
         showQuestion();
     }
 }
 
 nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
-        nextQuestion()
+        nextQuestion();
     } else {
         nextQuestionBtn.style.display = "none";
         finishBtn.style.display = "block";
