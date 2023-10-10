@@ -172,8 +172,6 @@ nextQuestionBtn.addEventListener("click", () => {
     }
 });
 
-startQuiz();
-
 /**
  * Function which is called in the showQuestion function
  * its purpose is to clear all colours and enable all buttons again
