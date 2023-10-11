@@ -29,8 +29,6 @@ am i responsive
 - [Deployment](#deployment)
 
 - [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
 
 ## UX
 ### Site Purpose
@@ -165,3 +163,15 @@ I deployed my site to GitHub pages using the following steps:
 - The page will automatically refresh and a link to the deployed website will appear.
 
 Link to my deployed site: https://alishafazal.github.io/quiz-game-project-2/
+
+## Credits
+### Content
+- I would like to give credit to [Brian Design],(https://www.youtube.com/watch?v=f4fB9Xg2JEY) as I took inspiration from the linked video in creating my questions array and in creating my main menu links.
+
+- I would like to credit [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8), as I took inspiration from this linked video for parts of my startQuiz and showQuestion functions in my script.js file.
+
+- I would like to give credit and a special thank you to [Jaspreet](https://github.com/JaspreetSAujla), for giving me advice on how I could overcome the problem I was having with the quiz score not incrementing as it should.
+
+- I would like to give credit and a special thank you to Sarah from the Code Institute tutor support service. When I was dealing with the issue of my final score not showing on my score.html page, she suggested I store the score variable into the browsers local storage so I could retrive the final score that way.
+
+- I would like to give credit and a special thank you to my mentor Martina Telervic, for providing me with support and for taking the time to read through my code and offering advice on issues I had.
