@@ -51,7 +51,7 @@ The target audience is for people who have a scientific background or people who
 ### Colour Scheme
 I used [coolors.co](https://coolors.co/) to find a colour scheme I could take inspiration from. I decided on using all three shades from the below colour palette:
 
-![Colour Palette](assets/images/Coolors%20palette.png)
+![Colour Palette](assets/images/coolors-palette.png)
 
 When combining both #C2BBF0 and #8FB8ED together from the above palette, I felt a darker shade of purple would go better, so I used #907AD6 instead. Using blue and purple together creates a fun feel for the site and rather than using dull colours. I also decided to use blue and purple as I felt these colours (especially blue) represent the science theme nicely. To allow the black coloured text to have maximum contrast against the background shades, I used #F1E3F3 in the above palette for all button and text containers.
 
