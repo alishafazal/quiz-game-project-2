@@ -138,6 +138,9 @@ Below is the report generated from Lighthouse on DevTools. This report was gener
 ![Lighthouse report](assets/images/lighthouse-test.png)
 
 ### Further Testing
+- I have tested my site on Google Chrome, Safari and Microsoft Edge and the site works well across all of these broswers.
+- All external links work and take the user to the correct destination in a new tab.
+- I asked some of my family and friends to test the site and I recieved all positive reviews.
 
 ### Solved Bugs
  When testing on devtools to see if the quiz score was incrementing properly, I found that it was almost doubling the score each time the user selected the correct answer. To find out where the problem was in my code, I logged the score to the console in each function to keep track of the score as the game progressed. The problem lay within this function as shown below:
@@ -202,6 +205,8 @@ Link to my deployed site: https://alishafazal.github.io/quiz-game-project-2/
 - I took inspiration from the "Love Running" walkthrough project when designing my footer. A comment above the footer in all HTML files has been given.
 
 - I used a science quiz question website to browse the different types of questions that could be asked. The link to this website can be found [here](https://funquizzes.uk/science-quiz-questions/).
+
+- I took inspiration from [this article](https://www.w3schools.com/css/css3_shadows_box.asp) from W3Schools, which allowed me to get a shadow effect on my answer buttons when the user hovers over them.
 
 - All icons used were sourced from [Font Awesome](https://fontawesome.com/).
 
