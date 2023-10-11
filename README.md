@@ -2,7 +2,7 @@
 The aim of this project was to create a fun and interactive science themed quiz game for users to test their scientific knowledge.
 
 
-am i responsive 
+![Am I responsive](assets/images/am-i-responsive.png)
 
 
 ## Table of contents
