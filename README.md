@@ -47,6 +47,10 @@ The target audience is for people who have a scientific background or people who
 
 # Design
 ### Wireframes
+I sketched my wireframes out by hand as it gave me more control in documenting my thoughts and design ideas
+
+![wireframe image one](assets/images/wireframes-one.png)
+![wireframe image two](assets/images/wireframes-two.png)
 
 ### Colour Scheme
 I used [coolors.co](https://coolors.co/) to find a colour scheme I could take inspiration from. I decided on using all three shades from the below colour palette:
@@ -57,3 +61,7 @@ When combining both #C2BBF0 and #8FB8ED together from the above palette, I felt 
 
 ### Typography
 All fonts were sourced from [Google Fonts](https://fonts.google.com/). I chose to use Overpass as the font for the main title of "Science Quiz Game", appearing in all pages of the site and Roboto for all other text. I used these two fonts as I felt they paired well together. Both are simple and easy to read, but at the same time they add a nice styling effect and increase the visual attractiveness of the site compared to using the basic Sans-Serif font.
+
+# Features
+### Existing Features
+### Future Features
