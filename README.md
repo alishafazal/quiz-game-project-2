@@ -64,4 +64,48 @@ All fonts were sourced from [Google Fonts](https://fonts.google.com/). I chose t
 
 # Features
 ### Existing Features
+#### Page Title
+The page title is placed at the top of every page to keep the site consistant.
+
+![Page title](assets/images/page-title.png)
+
+#### Main Menu Links
+Within the homepage, the user is presented with the following links to navigate to the quiz or to the instructions section.
+
+![Main menu links](assets/images/main-menu-links.png)
+
+I chose to create seperate HTML pages for each section as it made most sense to me to do it this way. Both links are clear and have an associated icon to further symbolise to the user what each link entails. When the user hovers over each icon, they become coloured, increasing the site interactivity.
+
+#### Instructions Section
+The instructions section contains a heading with icons at either side. The icons are relevant as they depict scientific glassware and I chose to include this as I thought it added a fun touch. Also included in this section are three simple lines of instructions to give a basic overview to the user on how to play the quiz. Lastly, I have included a link at the bottom of this section which takes the user back to the homepage after they have finished reading the instructions. I chose to incude a home icon as the link rather than text, as it makes the page less text heavy.
+
+![Instructions section](assets/images/instructions-section.png)
+
+#### Quiz Section
+When the user clicks start on the hompage, they are directed to the quiz section. In this section the user is presented initially with a question and four possible answers. If the user selects the right answer, the selected answer will turn green and the rest will become grey. If the user selects a wrong answer, it will turn red and the correct answer will highlight green, as shown below:
+
+![Quiz section](assets/images/quiz-section.png)
+
+This provides further interactivity for the user as they can see if they got the question correct instantly, or if they got it wrong and what the correct answer is, providing a learning experience. All answers buttons become disabled after the user has selected and answer and the next button appears as shown above, which allows the user to move onto the next question.
+
+#### End of Quiz Section
+Once the user has made it to the end of the quiz, the user is then presented with a finish button, which links to the score page to reveal the overall score the user has accumulated. As with all other buttons and links within the site, when the user hovers over the finish link, the background colour will change to a lighter shade of beige to signal to the user that they can press this button. I have chosen to structure this section in this way as its an easy to follow layout with lots of chances for the user to interact with the quiz, creating better user experience.
+
+![End of quiz section](assets/images/finish-quiz.png)
+
+#### Score Section
+Once the user presses finish, they are taken to the score page, where the user is presented with a trophy icon, their score out of ten and a retry link to take the user back to the homepage to try again.
+I added a trophy icon as it creates a sense of achievement for the user. The text which reveals the score is big and clear to read and below is the retry link which has an included arrow icon to signify that pressing this link will restart the game.
+
+![Score section](assets/images/score-section.png)
+
+#### Footer
+The footer is implemented across all pages in the site. I chose to include a footer as this allows a way for the user to be able to contact me if they experience any issues while playing, by clicking on the social media icons which all link to the relevant social media website.
+
+![Footer](assets/images/footer.png)
+
 ### Future Features
+To further improve my quiz game, the following features could be added:
+- A timer to give 10 seconds for each question before moving onto the next question.
+- More questions and the questions having the abilty to be shuffled, so every time the user plays they are presented with a new set of questions to maintain user interest.
+- Difficulty levels which would be useful for people who would like more or less of a challenge.
