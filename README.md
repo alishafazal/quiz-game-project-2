@@ -23,6 +23,7 @@ The aim of this project was to create a fun and interactive science themed quiz 
 - [Testing](#testing)
   - [Validator Testing](#validator-testing)
   - [Further Testing](#further-testing)
+  - [Solved Bugs](#solved-bugs)
 
 - [Programs and Libraries Used](#programs-and-libraries-used)
 
@@ -138,6 +139,28 @@ Below is the report generated from Lighthouse on DevTools. This report was gener
 
 ### Further Testing
 
+### Solved Bugs
+ When testing on devtools to see if the quiz score was incrementing properly, I found that it was almost doubling the score each time the user selected the correct answer. To find out where the problem was in my code, I logged the score to the console in each function to keep track of the score as the game progressed. The problem lay within this function as shown below:
+
+ ```
+     choices.forEach((button) => {
+        button.addEventListener("click", function() {
+            let selectedOption = button.textContent;
+            selectAnswer(selectedOption);
+        })
+    })
+ ```
+
+I corrected this error by removing the for loop and event listener which followed and I created a new function to target only the answer the user has selected:
+```
+function addEventListenerToAnswerButtons(clickEvent) {
+    let selectedOption = clickEvent.target.textContent;
+    selectAnswer(selectedOption);
+}
+```
+
+The second major bug I discovered was that I wasn't able to display the users overall score at the end of the quiz. By talking with Sarah from Code Institute tutor support, she gave me advice regarding the fact that I would need to store the score into the the browsers localStorage in order to display my score in my score page. I had to store the users overall score into the browsers localStorage as I had created a seperate HTML page to display my score. When the user would finish the quiz they would be taken to the score.html page and the score would be lost. To overcome this, I therefore stored the overall score into the browsers localStorage in my script.js file and then I created a score.js file to get the final score from local storage.
+
 ## Programs and Libraries Used
  - [Favicon](https://favicon.io/) - To generate the favicon image.
  - [Font Awesome](https://fontawesome.com/) - To add all icons across the site.
@@ -151,7 +174,7 @@ Below is the report generated from Lighthouse on DevTools. This report was gener
  - [The W3C Markup Validator](https://validator.w3.org/) - Used to check if my HTML files had any errors.
  - [The W3C CSS Validator](https://jigsaw.w3.org/css-validator/) - Used to check if my CSS file had any errors.
  - [JSHint](https://jshint.com/) - Used to check if my JavaScript files has any errors.
- - Google Developer Tools - Used to test for bugs at every stage of my sites development and for generating Lighthouse reports.
+ - Google Developer Tools - Used to test for bugs  and site responsiveness at every stage of my sites development and for generating Lighthouse reports.
 
 ## Deployment
 I deployed my site to GitHub pages using the following steps:
@@ -170,8 +193,20 @@ Link to my deployed site: https://alishafazal.github.io/quiz-game-project-2/
 
 - I would like to credit [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8), as I took inspiration from his linked video.
 
-- I would like to give credit and a special thank you to [Jaspreet](https://github.com/JaspreetSAujla), for giving me advice on the problem I was having with the quiz score not incrementing as it should.
+- I would like to give credit and a special thank you to [Jaspreet](https://github.com/JaspreetSAujla), for taking the time to give me good advice on the problem I was having with the quiz score not incrementing as it should.
 
-- I would like to give credit and a special thank you to Sarah from the Code Institute tutor support service. When I was dealing with the issue of my final score not showing on my score.html page, she suggested I store the score variable into the browsers local storage so I could retrive the final score that way.
+- I would like to give credit and a special thank you to Sarah from the Code Institute tutor support service. When I was dealing with the issue of my final score not showing on my score.html page she gave me good advice and was very helpful.
 
 - I would like to give credit and a special thank you to my mentor Martina Telervic, for providing me with support and for taking the time to read through my code and offering advice on issues I had.
+
+- I took inspiration from the "Love Running" walkthrough project when designing my footer. A comment above the footer in all HTML files has been given.
+
+- I used a science quiz question website to browse the different types of questions that could be asked. The link to this website can be found [here](https://funquizzes.uk/science-quiz-questions/).
+
+- All icons used were sourced from [Font Awesome](https://fontawesome.com/).
+
+- All fonts used were sourced from [Google Fonts](https://fonts.google.com/).
+
+- I used [Favicon.io](https://favicon.io/) to generate my favicon.
+
+- My colour scheme inspiration came from [Coolors.co](https://coolors.co/).
