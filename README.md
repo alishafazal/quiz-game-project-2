@@ -57,7 +57,7 @@ I used [coolors.co](https://coolors.co/) to find a colour scheme I could take in
 
 ![Colour Palette](assets/images/coolors-palette.png)
 
-When combining both #C2BBF0 and #8FB8ED together from the above palette, I felt a darker shade of purple would go better, so I used #907AD6 instead. Using blue and purple together creates a fun feel for the site and rather than using dull colours. I also decided to use blue and purple as I felt these colours (especially blue) represent the science theme nicely. To allow the black coloured text to have maximum contrast against the background shades, I used #F1E3F3 in the above palette for all button and text containers.
+When combining both #C2BBF0 and #8FB8ED together from the above palette, I felt a darker shade of purple would go better, so I used #907AD6 instead. Using blue and purple together creates a fun feel for the site, rather than using dull colours. I also decided to use blue and purple as I felt these colours (especially blue) represent the science theme nicely. To allow the black coloured text to have maximum contrast against the background shades, I used #F1E3F3 in the above palette for all button and text containers.
 
 ### Typography
 All fonts were sourced from [Google Fonts](https://fonts.google.com/). I chose to use Overpass as the font for the main title of "Science Quiz Game", appearing in all pages of the site and Roboto for all other text. I used these two fonts as I felt they paired well together. Both are simple and easy to read, but at the same time they add a nice styling effect and increase the visual attractiveness of the site compared to using the basic Sans-Serif font.
@@ -109,3 +109,7 @@ To further improve my quiz game, the following features could be added:
 - A timer to give 10 seconds for each question before moving onto the next question.
 - More questions and the questions having the abilty to be shuffled, so every time the user plays they are presented with a new set of questions to maintain user interest.
 - Difficulty levels which would be useful for people who would like more or less of a challenge.
+
+# Testing
+
+### Validator Testing
