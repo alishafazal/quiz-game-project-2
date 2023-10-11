@@ -2,7 +2,7 @@
 The aim of this project was to create a fun and interactive science themed quiz game for users to test their scientific knowledge.
 
 
-![Am I responsive](assets/images/am-i-responsive.png)
+![Am I responsive](assets/images/responsive.png)
 
 
 ## Table of contents
@@ -114,21 +114,21 @@ To further improve my quiz game, the following features could be added:
 #### HTML Validation
 All four HTML pages were tested using The W3C Markup Validator. No issues or warning errors were shown:
 
-![HTML validation pass](assets/images/HTML-validation.png)
+![HTML validation pass](assets/images/html-validation.png)
 
 #### CSS Validation
 I ran my CSS code through The W3C CSS Validator and no errors were found:
 
-![CSS validation pass](assets/images/CSS-validation.png)
+![CSS validation pass](assets/images/css-validation.png)
 
 #### JavaScript Validation
 
-I ran both JavaScript files through JSHint.
+I ran both JavaScript files through JSHint and no errors were found:
 
-![JavaScript validation for script.js](assets/images/JS-validation.png)
+![JavaScript validation for script.js](assets/images/js-validation.png)
 
 
-![JavaScript Validation for score.js](assets/images/JS-validation-1.png)
+![JavaScript Validation for score.js](assets/images/js-validation-1.png)
 
 #### Lighthouse Report
 
@@ -166,11 +166,11 @@ Link to my deployed site: https://alishafazal.github.io/quiz-game-project-2/
 
 ## Credits
 ### Content
-- I would like to give credit to [Brian Design],(https://www.youtube.com/watch?v=f4fB9Xg2JEY) as I took inspiration from the linked video in creating my questions array and in creating my main menu links.
+- I would like to give credit to [Brian Design](https://www.youtube.com/watch?v=f4fB9Xg2JEY), as I took inspiration from his linked video.
 
-- I would like to credit [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8), as I took inspiration from this linked video for parts of my startQuiz and showQuestion functions in my script.js file.
+- I would like to credit [GreatStack](https://www.youtube.com/watch?v=PBcqGxrr9g8), as I took inspiration from his linked video.
 
-- I would like to give credit and a special thank you to [Jaspreet](https://github.com/JaspreetSAujla), for giving me advice on how I could overcome the problem I was having with the quiz score not incrementing as it should.
+- I would like to give credit and a special thank you to [Jaspreet](https://github.com/JaspreetSAujla), for giving me advice on the problem I was having with the quiz score not incrementing as it should.
 
 - I would like to give credit and a special thank you to Sarah from the Code Institute tutor support service. When I was dealing with the issue of my final score not showing on my score.html page, she suggested I store the score variable into the browsers local storage so I could retrive the final score that way.
 
