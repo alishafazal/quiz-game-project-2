@@ -159,7 +159,8 @@ function nextQuestion() {
  * when the user presses the next button, the question will therefore move onto the next question
  * if the user reaches the end of the quiz, the next button is hidden and finish button displayed
  * overall score is stored in the finalScore variable
- * final score is converted to a string and is stored in the browsers local storage
+ * final score is converted to a string and is stored in the browsers local storage - from the advice
+ * given by tutor support
  */
 nextQuestionBtn.addEventListener("click", () => {
     if (questionNumber < questions.length) {
