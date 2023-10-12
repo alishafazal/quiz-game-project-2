@@ -46,7 +46,7 @@ The target audience is for people who have a scientific background or people who
 
 ## Design
 ### Wireframes
-I sketched my wireframes out by hand as it gave me more control in documenting my thoughts and design ideas
+I sketched my wireframes out by hand, as it gave me more control in documenting my thoughts and design ideas.
 
 ![wireframe image one](assets/images/wireframes-one.png)
 ![wireframe image two](assets/images/wireframes-two.png)
@@ -85,7 +85,7 @@ When the user clicks start on the hompage, they are directed to the quiz section
 
 ![Quiz section](assets/images/quiz-section.png)
 
-This provides further interactivity for the user as they can see if they got the question correct instantly, or if they got it wrong and what the correct answer is, providing a learning experience. All answers buttons become disabled after the user has selected and answer and the next button appears as shown above, which allows the user to move onto the next question.
+This provides further interactivity for the user as they can see if they got the question correct instantly, or if they got it wrong and what the correct answer is, providing a learning experience. All answer buttons become disabled after the user has selected and answer and the next button appears as shown above, which allows the user to move onto the next question.
 
 #### End of Quiz Section
 Once the user has made it to the end of the quiz, the user is then presented with a finish button, which links to the score page to reveal the overall score the user has accumulated. As with all other buttons and links within the site, when the user hovers over the finish link, the background colour will change to a lighter shade of beige to signal to the user that they can press this button. I have chosen to structure this section in this way as its an easy to follow layout with lots of chances for the user to interact with the quiz, creating better user experience.
@@ -162,7 +162,7 @@ function addEventListenerToAnswerButtons(clickEvent) {
 }
 ```
 
-The second major bug I discovered was that I wasn't able to display the users overall score at the end of the quiz. By talking with Sarah from Code Institute tutor support, she gave me advice regarding the fact that I would need to store the score into the the browsers localStorage in order to display my score in my score page. I had to store the users overall score into the browsers localStorage as I had created a seperate HTML page to display my score. When the user would finish the quiz they would be taken to the score.html page and the score would be lost. To overcome this, I therefore stored the overall score into the browsers localStorage in my script.js file and then I created a score.js file to get the final score from local storage.
+The second major bug I discovered was that I wasn't able to display the users overall score at the end of the quiz. By talking with Sarah from Code Institute tutor support, she gave me advice regarding the fact that I would need to store the score into the the browsers localStorage. I had to store the users overall score into the browsers localStorage as I had created a seperate HTML page to display my score. When the user would finish the quiz they would be taken to the score.html page and the score would be lost. To overcome this, I therefore stored the overall score into the browsers localStorage in my script.js file and then I created a score.js file to get the final score from local storage.
 
 ## Programs and Libraries Used
  - [Favicon](https://favicon.io/) - To generate the favicon image.
@@ -200,7 +200,7 @@ Link to my deployed site: https://alishafazal.github.io/quiz-game-project-2/
 
 - I would like to give credit and a special thank you to Sarah from the Code Institute tutor support service. When I was dealing with the issue of my final score not showing on my score.html page she gave me good advice and was very helpful.
 
-- I would like to give credit and a special thank you to my mentor Martina Telervic, for providing me with support and for taking the time to read through my code and offering advice on issues I had.
+- I would like to give credit and a special thank you to my mentor Martina Terlevic, for providing me with support and for taking the time to read through my code and offering advice on issues I had.
 
 - I took inspiration from the "Love Running" walkthrough project when designing my footer. A comment above the footer in all HTML files has been given.
 
